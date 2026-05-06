@@ -90,6 +90,22 @@ pytest tests/ -v
 
 ---
 
+## Análises disponíveis
+
+Execute as análises prontas sobre os dados Gold:
+
+```bash
+python queries/analises.py
+```
+
+Gera três relatórios em `queries/resultados/`:
+
+| Arquivo | Pergunta respondida |
+|---|---|
+| `cidade_mais_instavel.csv` | Qual cidade tem maior amplitude térmica? |
+| `resumo_por_cidade.csv` | Qual o resumo de temperatura por cidade? |
+| `tendencia_temperatura.csv` | Qual a tendência mais recente por cidade? |
+
 ## Decisões técnicas
 
 **Por que DuckDB?**
