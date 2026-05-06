@@ -58,7 +58,7 @@ weather-etl/
 
 **1. Clonar o repositório**
 ```bash
-git clone https://github.com/FredVenturin/weather-etl.git
+git clone https://github.com/FredVenturin/weather-api-data.git
 cd weather-etl
 ```
 
