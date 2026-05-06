@@ -7,18 +7,19 @@ Coleta dados históricos de temperatura de 5 cidades brasileiras via API públic
 ---
 
 ## Arquitetura Medallion
-API Open-Meteo
-↓
-[Bronze]  → JSONs brutos por cidade/data em data/bronze/
-↓
-[Silver]  → dados limpos e tipados em DuckDB (silver.clima)
-↓
-[Gold]    → agregações analíticas em DuckDB
-├── gold.resumo_mensal
-├── gold.amplitude_termica
-└── gold.media_movel
 
----
+```
+API Open-Meteo
+      ↓
+  [Bronze]  → JSONs brutos por cidade/data em data/bronze/
+      ↓
+  [Silver]  → dados limpos e tipados em DuckDB (silver.clima)
+      ↓
+  [Gold]    → agregações analíticas em DuckDB
+                ├── gold.resumo_mensal
+                ├── gold.amplitude_termica
+                └── gold.media_movel
+```
 
 ## Stack
 
@@ -34,6 +35,8 @@ API Open-Meteo
 ---
 
 ## Estrutura de pastas
+
+```
 weather-etl/
 ├── etl/
 │   ├── extract.py      # camada Bronze — extração da API
@@ -49,8 +52,7 @@ weather-etl/
 │   └── test_gold.py    # valida tabelas e agregações
 ├── pipeline.py         # ponto de entrada — orquestra o pipeline
 └── requirements.txt    # dependências do projeto
-
----
+```
 
 ## Como rodar
 
